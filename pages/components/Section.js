@@ -57,7 +57,7 @@ function Section() {
       </div>
       <div className={Styles.col2}>
         <Image src={Controller} />
-        <div class={Styles.colorbox}></div>
+        <div className={Styles.colorbox}></div>
         {/* <img src="./Playstation_Img/controller.png" className="controller"> */}
       </div>
     </div>
