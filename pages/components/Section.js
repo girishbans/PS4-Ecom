@@ -4,6 +4,36 @@ import Controller from "../../public/controller.png";
 import GooglePayButton from "@google-pay/button-react";
 
 function Section() {
+  const paymentRequest = {
+    apiVersion: 2,
+    apiVersionMinor: 0,
+    allowedPaymentMethods: [
+      {
+        type: "CARD",
+        parameters: {
+          allowedAuthMethods: ["PAN_ONLY", "CRYPTOGRAM_3DS"],
+          allowedCardNetworks: ["MASTERCARD", "VISA"]
+        },
+        tokenizationSpecification: {
+          type: "PAYMENT_GATEWAY",
+          parameters: {
+            gateway: "example"
+          }
+        }
+      }
+    ],
+    merchantInfo: {
+      merchantId: "12345678901234567890",
+      merchantName: "Demo Merchant"
+    },
+    transactionInfo: {
+      totalPriceStatus: "FINAL",
+      totalPriceLabel: "Total",
+      totalPrice: "900.00",
+      currencyCode: "INR",
+      countryCode: "IN"
+    }
+  };
   return (
     <div className={Styles.row}>
       <div className={Styles.col1}>
@@ -17,43 +47,13 @@ function Section() {
           Buy Now{" "}
         </button>
         <GooglePayButton
-          buttonType="buy"
-          environment="TEST"
-          paymentRequest={{
-            apiVersion: 2,
-            apiVersionMinor: 0,
-            allowedPaymentMethods: [
-              {
-                type: "CARD",
-                parameters: {
-                  allowedAuthMethods: ["PAN_ONLY", "CRYPTOGRAM_3DS"],
-                  allowedCardNetworks: ["MASTERCARD", "VISA"],
-                },
-                tokenizationSpecification: {
-                  type: "PAYMENT_GATEWAY",
-                  parameters: {
-                    gateway: "example",
-                    gatewayMerchantId: "exampleGatewayMerchantId",
-                  },
-                },
-              },
-            ],
-            merchantInfo: {
-              merchantId: "12345678901234567890",
-              merchantName: "Demo Merchant",
-            },
-            transactionInfo: {
-              totalPriceStatus: "FINAL",
-              totalPriceLabel: "Total",
-              totalPrice: "100.00",
-              currencyCode: "USD",
-              countryCode: "US",
-            },
-          }}
-          onLoadPaymentData={(paymentRequest) => {
-            console.log("load payment data", paymentRequest);
-          }}
-        />
+              environment="TEST"
+              buttonSizeMode="static"
+              paymentRequest={paymentRequest}
+              onLoadPaymentData={(paymentRequest) => {
+                console.log("load payment data", paymentRequest);
+              }}
+            />
       </div>
       <div className={Styles.col2}>
         <Image src={Controller} />
