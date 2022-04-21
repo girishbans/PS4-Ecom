@@ -8,8 +8,8 @@
 .col1{
     /* background-color: aqua; */
     position: relative;
-    margin-left: 50px;
-    width: 40%;
+    margin-left: 120px;
+    width: 50%;
 }
 
 .col1 h2{
@@ -20,7 +20,7 @@
     font-size: 30px;
     color: #707070;
     font-weight: 300;
-    margin-top: 20px;
+
 }
 .col1 p{
     font-size: 20px;
@@ -77,13 +77,13 @@ button:hover{
     background: linear-gradient(#ff469f, #ff6062);
     position: absolute;
     left: -40px;
-    top: 2%;
+    top: 11%;
 
 }
 
 .col2{
     position: relative;
-    width: 60%;
+    width: 50%;
     display: flex;
     align-items: center;
     
@@ -97,11 +97,53 @@ button:hover{
 .colorbox{
     position: absolute;
     right: 0;
-    top: 0;
+    top: 5%;
     background: linear-gradient(#ff54a2, #ff575a);
-    height: 100%;
-    width: 80%;
+    height: 90%;
+    width: 90%;
     z-index: -10000;
     border-radius: 20px 0 0 20px ;
     transform: translateX(154px);
+}
+
+@media screen and (max-width: 768px) {
+    
+    .row{
+        flex-direction: column-reverse;
+        margin-top: 45px;
+        margin-left: 100px;
+    }
+
+    .col2{
+    flex-basis: 100%;
+    margin-bottom: 50px;
+    }
+
+    .col2 .controller{
+        width: 77%;
+        margin-left: 30%;
+    }
+
+    .colorbox{
+        transform: translate(100px,-30px);
+        /* transform: translateY(-20px); */
+        width: 125%;
+        height: 150%;
+    }
+
+    .col1 h2{
+        font-size: 45px;
+    }
+    .col1 h3{
+        font-size: 15px;
+        width: 290%;
+    }
+
+    .col1{
+        margin-left: -210px;
+    }
+
+    .col1 p{
+        font-size: 12px;
+    }
 }

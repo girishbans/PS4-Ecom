@@ -43,9 +43,9 @@ function Section() {
         <h3>Wireless Controller for Playstation 4</h3>
         <p>(Compatible/Generic)</p>
         <h4>Rs 4,000/-</h4>
-        <button className={Styles.btn} type="button">
+        {/* <button className={Styles.btn} type="button">
           Buy Now{" "}
-        </button>
+        </button> */}
         <GooglePayButton
               environment="TEST"
               buttonSizeMode="static"
@@ -56,7 +56,7 @@ function Section() {
             />
       </div>
       <div className={Styles.col2}>
-        <Image alt='Controller' src={Controller} />
+        <Image alt='Controller' src={Controller} height={400} width={650} />
         <div className={Styles.colorbox}></div>
         {/* <img src="./Playstation_Img/controller.png" className="controller"> */}
       </div>

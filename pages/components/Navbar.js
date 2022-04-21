@@ -38,8 +38,7 @@ function Navbar() {
                     <button className="sIn" onClick={()=> signOut()}>
                     <a>{session.user.name}</a>
                     </button>
-                
-            </div>
+                </div>
             </nav>
             </div>
             
