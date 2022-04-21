@@ -1,0 +1,41 @@
+.Navbar{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.Logo{
+    width: 50px;
+    cursor: pointer;
+    margin: 30px 0;
+}
+.menuicon{
+    width: 25px;
+    cursor: pointer;
+    margin: 30px 0;
+    display: none;
+}
+
+.Nav{
+    flex: 1;
+    text-align: right;
+}
+
+.Nav ul li{
+    /* list-style: none; */
+    /* margin-right: 30px; */
+    display: inline-block;
+}
+
+.Nav ul li a{
+    list-style: none;
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+    margin-right: 30px;
+}
+
+.Nav ul li a:hover{
+    color: #ff5ea2;
+    transition: 0.2s;
+}
