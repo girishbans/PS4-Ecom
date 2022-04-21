@@ -15,7 +15,6 @@ export default function Home() {
   } else {
     return (
       <div className={styles.login}>
-        <img src="/logofull.png" /> <br />
         <button className={styles.loginbtn} onClick={() => signIn()}>
           <FcGoogle size={20} /> &nbsp; Login With Google
         </button>

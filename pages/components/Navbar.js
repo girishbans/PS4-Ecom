@@ -13,7 +13,7 @@ function Navbar() {
   return (
     <div className={Styles.Navbar}>
             <div className={Styles.Logo}>
-                <Image  src={Logo} width={50} height={40} />
+                <Image alt='Logo' src={Logo} width={50} height={40} />
             </div>
             
             {/* <img src="./Playstation_Img/logo.png" class="logo"> */}
