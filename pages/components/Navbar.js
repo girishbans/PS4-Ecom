@@ -36,7 +36,7 @@ function Navbar() {
                 <div className="btn" style={{ color: "white" }}>
                 
                     <button className="sIn" onClick={()=> signOut()}>
-                    <a>{session.user.name}</a>
+                    <a>LogOut</a>
                     </button>
                 </div>
             </nav>
